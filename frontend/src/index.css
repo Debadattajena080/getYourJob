@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-PrimaryGrayDarker; /* Replace with your desired background color class */
+  @apply text-white;
+}
+
+.invert-white {
+  filter: invert(1) brightness(1000%) grayscale(100%) contrast(100%);
+}
+
+.gradient-border {
+  padding: 8px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #8e8e8f, transparent 80%);
+  border-image-slice: 1;
+  border-radius: 50px 0 0 50px;
+}
+
