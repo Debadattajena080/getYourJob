@@ -1,18 +1,24 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import JobCard from "./JobCard.jsx";
 
 const Index = () => {
-  const[data, setData] = useState();
+  const [data, setData] = useState();
+
+  const getData = async () => {
+    const response = await fetch("http://localhost:5000");
+    const result = await response.json();
+
+    if (response.ok) {
+      setData(result);
+    }
+  };
 
   useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      });
+    getData();
   }, []);
+
   return (
-    <div >
+    <div>
       <JobCard data={data} />
     </div>
   );

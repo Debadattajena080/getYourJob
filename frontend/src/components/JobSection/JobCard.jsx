@@ -28,7 +28,7 @@ const JobCard = ({ data }) => {
           </div>
 
      
-          {data?.JobDetails.map((job, index) => (
+          {data?.map((job, index) => (
             <div key={index} className="w-full mb-4">
               <div className="p-5 bg-jobCardPrimary rounded-t-xl flex">
                 <img
@@ -56,7 +56,7 @@ const JobCard = ({ data }) => {
               <div className="bg-jobCardPrimaryDark rounded-b-xl flex p-5 justify-between">
                 <div className="flex space-x-2">
                   {" "}
-                  <p className="font-normal">{job?.postedAgo} </p>
+                  <p className="font-normal">Posted {job?.posted} days ago </p>
                   <h3>&#8226;</h3> <p>{job?.applicants} applicants</p>
                 </div>
 

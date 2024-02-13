@@ -5,7 +5,7 @@ import JobIndex from './JobSection/JobIndex'
 const Index = () => {
   return (
     <div className="flex mt-10">
-    <div className="mx-20 flex"> 
+    <div className="mx-auto flex"> 
       <div className="w-2/6 mr-10"> 
         <div>
           <FilterIndex />
